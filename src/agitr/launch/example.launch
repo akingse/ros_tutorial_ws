@@ -1,0 +1,22 @@
+<launch>
+    <node
+        pkg="turtlesim"
+        type="turtlesim_node"
+        name="turtlesim"
+        respawn="true"
+    />
+    <node pkg="agitr" type="pubvel" name="publish_velocity_temp"></node>
+    <node pkg="agitr" type="subpose" name="pose_subscriber" output="screen"/>
+    
+
+</launch>
+
+      <!--  注意" "内不可有空格
+
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop_key" required="true" 
+    launch-prefix="xterm -e"/>
+
+roslaunch agitr example.launch
+      ctrl+c结束，反应太慢，应该是subpose节点的锅
+      [pose_subscriber-5] escalating to SIGTERM
+      -->

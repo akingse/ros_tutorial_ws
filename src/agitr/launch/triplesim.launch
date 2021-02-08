@@ -1,0 +1,45 @@
+<launch>
+
+<!-- 想在启动文件中包含其他启动文件的内容,使用包含(include)元素
+    <include file=”path-to-launch-file”>
+    使用查找(find)命令搜索功能包的位置来替代直接输入路径
+    $(find agitr)
+-->
+    <include file ="$(find agitr)/launch/doublesim.launch"/>
+        <arg name="use_sim3" default ="0"/>
+<!--将内容压入一个指定的命名空间中去:
+         ns=”namespace” -->
+    
+    <group ns="sim3" if ="$(arg use_sim3)" > <!--arg参数 use_sim3==1执行此sim3空间-->
+        <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" />
+        <node pkg="turtlesim" type="turtle_teleop_key" name="teleop_key" required="true" launch-prefix="xterm -e"/>
+    </group>
+</launch>
+
+<!--
+启动参数(launch arguments)
+roslaunch还支持启动参数，其功能有点像可执行程序中的局部变量。优点是通过设置参数来描述节点在不同ROS会话中运行时可能需要改变的一小部分,从而避免代码重复
+计算机语言prarmeter 和argument 都是可以互换的,但是在 ROS 中非常不同
+parameter 是运行中的 ROS 系统使用的数值,存储在参数服务器(parameter server)中，通过 ros::param::get 函数来获取
+argument 只在启动文件内才有意义;他们的值是不能被节点直接获取的。
+声明参数 
+<arg name=”agr-name”>
+参数赋值
+<arg name=”arg-name” default=”arg-value”/>  <arg name=”arg-name” value=”arg-value”/>
+roslaunch命令行参数可以覆盖默认值 default,但是不能覆盖参数值 value.
+
+创建组(Creating groups)
+组(group)元素,提供了一种在大型启动文件内管理节点的便捷方式
+1 组可以把若干个节点放入同一个命名空间内。
+<group ns=”namespace”/>
+... //组内的每个节点都从给定的默认命名空间启动
+</group>
+2 根据条件地使能或禁用一个节点
+<group if=”0 or 1”/> </group>
+<group unless=”1 or 0”/> </group>
+
+
+roslaunch agitr triplesim.launch use_sim3:=true  //启动sim3空间
+-->
+
+<!---->

@@ -1,0 +1,19 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" ns="sim1"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop_key" ns="sim1"
+    launch-prefix="xterm -e"/>
+
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" ns="sim2"/>
+    <node pkg="agitr" type="pubvel" name="publish_velocity_temp" ns="sim2"/>
+    
+
+</launch>
+
+
+<!-- 
+    <node pkg="agitr" type="subpose" name="pose_subscriber" output="screen"/>
+doublesim.launch 启动两个独立的 turtlesim 仿真。
+sim1 sim2 不同明明空间里的节点可以重名
+
+-->

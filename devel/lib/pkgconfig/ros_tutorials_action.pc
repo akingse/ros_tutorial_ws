@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/devel
+
+Name: ros_tutorials_action
+Description: Description of ros_tutorials_action
+Version: 0.1.0
+Cflags: -I/home/akingse/tutorial_ws/devel/include -I/usr/include
+Libs: -L${prefix}/lib -lros_tutorials_action /usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: std_msgs actionlib_msgs actionlib roscpp

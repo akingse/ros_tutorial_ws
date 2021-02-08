@@ -1,0 +1,26 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" >
+    <remap from="turtle1/cmd_vel" to="turtle1/cmd_vel_reversed" /><!--划重点，节点获取消息的重映射的语法-->
+    </node> 
+
+    <node pkg="turtlesim" type="turtle_teleop_key" name="teleop_key" 
+    launch-prefix="xterm -e"/> <!--如果没有新窗口，在终端界面也可以控制，可能只限于一个窗口吧-->
+
+    <node
+        pkg="agitr"
+        type="reverse_cmd_vel"
+        name="reverse_velocity"
+    />
+</launch>
+
+<!-- 
+
+<node
+    pkg="agitr"
+    type="reverse_cmd_vel" //
+    name="reverse_velocity"
+    />
+
+
+-->
+<!-- -->

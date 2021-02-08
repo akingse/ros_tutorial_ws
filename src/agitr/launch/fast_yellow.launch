@@ -1,0 +1,27 @@
+<launch>
+
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim"/>
+    <node pkg="agitr" type="pubvel_with_max" name="publish_velocity">
+
+    <param name="max_vel" value="10" />
+    </node>
+    
+    <node pkg="agitr" type="set_bg_color" name="set_bg_color"/>
+</launch>
+
+
+<!-- 
+命令行
+rosparam set /publish_velocity/max_vel 2
+launch文件
+<param name="param-name" value="param-value" />  通常,这个参数名是相对的
+
+设置私有参数，参数名将被当做该节点的私有名称。
+<node . . . >
+    <param name="param-name" value="param-value" /> 在node元素中包含 param 元素。
+</node>
+作为节点元素的子集时,param 元素中给出的参数名总是被当做私有名称解析,无论它们是否以~或者/开始。
+
+
+
+-->

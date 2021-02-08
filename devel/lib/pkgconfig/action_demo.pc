@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/devel
+
+Name: action_demo
+Description: Description of action_demo
+Version: 0.0.0
+Cflags: -I/home/akingse/tutorial_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: actionlib actionlib_msgs genmsg message_generation roscpp rospy std_msgs

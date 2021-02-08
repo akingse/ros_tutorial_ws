@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/devel
+
+Name: tf_follower
+Description: Description of tf_follower
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

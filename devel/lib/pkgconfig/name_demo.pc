@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/devel
+
+Name: name_demo
+Description: Description of name_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

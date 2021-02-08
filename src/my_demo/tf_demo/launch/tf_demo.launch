@@ -1,0 +1,16 @@
+<launch>
+
+
+    <node pkg="tf_demo" type="tf_broadcaster" name="tf_broadcaster" 
+    launch-prefix="xterm -e"/>
+
+    <node pkg="tf_demo" type="tf_listerner" name="tf_listerner" 
+    launch-prefix="xterm -e"/>
+    
+
+</launch>
+
+<!-- roslaunch tf_demo tf_demo.launch
+sudo dpkg-reconfigure console-setup //修改 xterm 窗口参数
+
+-->

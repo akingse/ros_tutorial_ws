@@ -1,0 +1,35 @@
+# CMake generated Testfile for 
+# Source directory: /home/akingse/tutorial_ws/src
+# Build directory: /home/akingse/tutorial_ws/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("my_learning/learning_launch")
+subdirs("beginner_tutorials")
+subdirs("ros_tutorials/empty_ros_pkg")
+subdirs("my_learning/learning_parameter")
+subdirs("ros_tutorials/my_first_ros_pkg")
+subdirs("my_demo/name_demo")
+subdirs("my_demo/orbslam2_demo")
+subdirs("my_demo/param_demo")
+subdirs("ros_tutorials/ros_tutorials_parameter")
+subdirs("ros_tutorials/ros_tutorials_service")
+subdirs("ros_tutorials/ros_tutorials_topic")
+subdirs("my_demo/rtabmap_demo")
+subdirs("my_demo/service_demo")
+subdirs("my_demo/topic_demo")
+subdirs("my_demo/action_demo")
+subdirs("ros_tutorials/ros_tutorials_action")
+subdirs("my_demo/msgs_demo")
+subdirs("my_demo/navigation_sim_demo")
+subdirs("my_demo/robot_sim_demo")
+subdirs("my_demo/slam_sim_demo")
+subdirs("my_demo/tf_demo")
+subdirs("my_demo/tf_follower")
+subdirs("agitr")
+subdirs("my_learning/learning_service")
+subdirs("my_learning/learning_tf")
+subdirs("my_learning/learning_topic")
+subdirs("ros_tutorials/testbot_description")
+subdirs("my_demo/urdf_demo")

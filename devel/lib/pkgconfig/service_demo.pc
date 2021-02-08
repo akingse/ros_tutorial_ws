@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/devel
+
+Name: service_demo
+Description: Description of service_demo
+Version: 0.0.0
+Cflags: -I/home/akingse/tutorial_ws/devel/include
+Libs: -L${prefix}/lib -lservice_demo
+Requires: message_runtime

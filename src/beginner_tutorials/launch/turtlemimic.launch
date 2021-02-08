@@ -1,0 +1,17 @@
+<launch> //以launch标签开头以表明这是一个launch文件。
+
+  <group ns="turtlesim1"> //创建了两个节点分组并以'命名空间（namespace)'标签来区分
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/> //两个组里面都使用相同的turtlesim节点并命名为'sim'
+  </group>
+
+  <group ns="turtlesim2">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+  </group>
+
+  <node pkg="turtlesim" name="mimic" type="mimic">  //启动模仿节点
+    <remap from="input" to="turtlesim1/turtle1"/>  //并将所有话题的输入和输出分别重命名为turtlesim1和turtlesim2，这样就会使turtlesim2模仿turtlesim1。
+    <remap from="output" to="turtlesim2/turtle1"/>
+  </node>
+//launch文件的结束标签
+</launch> 
+

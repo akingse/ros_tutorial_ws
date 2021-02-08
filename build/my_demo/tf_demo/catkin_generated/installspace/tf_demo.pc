@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/install
+
+Name: tf_demo
+Description: Description of tf_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

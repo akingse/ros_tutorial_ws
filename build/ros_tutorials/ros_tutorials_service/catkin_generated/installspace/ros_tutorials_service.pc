@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/install
+
+Name: ros_tutorials_service
+Description: Description of ros_tutorials_service
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lros_tutorials_service
+Requires: std_msgs roscpp

@@ -1,0 +1,8 @@
+prefix=/home/akingse/tutorial_ws/install
+
+Name: orbslam2_demo
+Description: Description of orbslam2_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
